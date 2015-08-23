@@ -48,3 +48,6 @@ divide the application into two application, one with GUI and another without GU
 the application without GUI can be owned by root and take the s flag permission and takes arguments from command line.
 
 the GUI application takes no permissions except the execution permission, establish a pipe with the other application, write parameters to it and take the output.
+
+
+check this link <http://mostafa-elkoumy.github.io/Linux-SCSI-Driver-MiddleWare-/>
