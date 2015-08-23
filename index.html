@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Linux-scsi-driver-middleware- : Implementation of Linux SCSI Driver using SCSI Generic Device (sg)">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Linux-scsi-driver-middleware-</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mostafa-elkoumy/Linux-SCSI-Driver-MiddleWare-">View on GitHub</a>
+
+          <h1 id="project_title">Linux-scsi-driver-middleware-</h1>
+          <h2 id="project_tagline">Implementation of Linux SCSI Driver using SCSI Generic Device (sg)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mostafa-elkoumy/Linux-SCSI-Driver-MiddleWare-/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mostafa-elkoumy/Linux-SCSI-Driver-MiddleWare-/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>IntroDuction.</h3>
+
+<p>Every connected device act in linux like a file, so if you read data from device you actually read from file and the same scenario with writing operation. Also, the reading and writing operation is depends on the user permissions to read or write on this file.</p>
+
+<p>when an application is owned by a root user, and has the s flag permission can run easily with double click with the access rights of the application owner.</p>
+
+<p>But, According to GTK+, the thing that responsible fpr making Graphical User Interface didn't accept the s flag permission.</p>
+
+<p>so, every time you use this application, you must take it to terminal , write "sudo" before it then write the password to start executing.</p>
+
+<h3>
+<a id="work-around" class="anchor" href="#work-around" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work around</h3>
+
+<p>go to the sudoers file, and write this line to accept running without password for this applications.</p>
+
+<h3>
+<a id="solution" class="anchor" href="#solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution</h3>
+
+<p>divide the application into two application, one with GUI and another without GUI, "normal C/C++ project".</p>
+
+<p>the application without GUI can be owned by root and take the s flag permission and takes arguments from command line.</p>
+
+<p>the GUI application takes no permissions except the execution permission, establish a pipe with the other application, write parameters to it and take the output.</p>
+
+<h3>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
+
+<p>Mostafa El-koumy <a href="https://eg.linkedin.com/in/elkoumy">https://eg.linkedin.com/in/elkoumy</a>, </p>
+
+<p><a href="https://github.com/mostafa-elkoumy" class="user-mention">@mostafa-elkoumy</a> , </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Linux-scsi-driver-middleware- maintained by <a href="https://github.com/mostafa-elkoumy">mostafa-elkoumy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
